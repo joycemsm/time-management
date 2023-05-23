@@ -7,9 +7,9 @@ import { defaultTheme } from "./styles/themes/default";
 export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <BrowserRouter />
-      <Router />
-      <BrowserRouter />
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
       <GlobalStyle />
     </ThemeProvider>
   );

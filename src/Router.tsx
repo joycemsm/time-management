@@ -7,9 +7,11 @@ import { Home } from "./pages/Home";
 export function Router() {
   return (
     <>
-      <Routes path="/" element={<DefaultLayout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/history" element={<History />} />
+      <Routes>
+        <Route path="/" element={<DefaultLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/history" element={<History />} />
+        </Route>
       </Routes>
     </>
   );
