@@ -39,7 +39,9 @@ export const HistoryList = styled.main`
         border-top-right-radius: 8px;
         padding-right: 1.5rem;
       }
-  }
+    }  
+  } 
+
 
   td {
   
@@ -58,5 +60,29 @@ export const HistoryList = styled.main`
         border-top-right-radius: 8px;
         padding-right: 1.5rem;
       }
+  }
+`;
+
+const STATUS_COLORS = {
+  yellow: "yellow-500",
+  red: "red-500",
+  green: "green-500",
+} as const;
+
+interface StatusProps {
+  statusColor: keyof typeof STATUS_COLORS;
+}
+
+export const Status = styled.span<StatusProps>`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &::before {
+    content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 99px;
+    background: ${(props) => props.theme[STATUS_COLORS[props.statusColor]]};
   }
 `;
