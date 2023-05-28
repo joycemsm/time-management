@@ -6,7 +6,7 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
 
   img {
-    opacity: 0.6;
+    opacity: 0.5;
   }
 
   nav {
